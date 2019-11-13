@@ -1,0 +1,226 @@
+{
+	"info": {
+		"_postman_id": "4e5f88bf-6f89-40cb-8a8d-688f06cb5fa7",
+		"name": "Laravel Api Crud R&D",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8000/api/store",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"fName\":\"Hashmi\",\n\t\"LName\":\"Shihab\",\n\t\"standard\":\"10\",\n\t\"pNo\":\"01737962059\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/store",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"store"
+					]
+				},
+				"description": "storing raw data"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/store",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "fName",
+							"value": "Dip",
+							"type": "text"
+						},
+						{
+							"key": "lName",
+							"value": "Gosh",
+							"type": "text"
+						},
+						{
+							"key": "standard",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "pNo",
+							"value": "01737962058",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/store",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"store"
+					]
+				},
+				"description": "Storing data with form-data"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/index",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"index"
+					]
+				},
+				"description": "Retriving All Data"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/show/2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/show/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"show",
+						"2"
+					]
+				},
+				"description": "Retriving Data By Id"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/update/1?fName=Hashmi&lName=Shihab&standard=10&pNo=01737962059",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/update/1?fName=Hashmi&lName=Shihab&standard=10&pNo=01737962059",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"update",
+						"1"
+					],
+					"query": [
+						{
+							"key": "fName",
+							"value": "Hashmi"
+						},
+						{
+							"key": "lName",
+							"value": "Shihab"
+						},
+						{
+							"key": "standard",
+							"value": "10"
+						},
+						{
+							"key": "pNo",
+							"value": "01737962059"
+						}
+					]
+				},
+				"description": "Update Data By Id"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/destroy/2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/destroy/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"destroy",
+						"2"
+					]
+				},
+				"description": "Delete Data Using Get Method"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/delete/3",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/delete/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"delete",
+						"3"
+					]
+				},
+				"description": "Delete Data Using Delete Method"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
